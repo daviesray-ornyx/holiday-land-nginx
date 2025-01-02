@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  webgl:
+    container_name: holiday-land-game
+    image: daviesray1986/holiday-land-game
+    build: .
+    ports:
+      - "8080:80"
