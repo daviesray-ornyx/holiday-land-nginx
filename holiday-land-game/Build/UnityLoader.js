@@ -4792,6 +4792,8 @@ var UnityLoader = UnityLoader || {
                                     0 == document.URL.indexOf("file:") && alert("It seems your browser does not support running Unity WebGL content from file:// urls. Please upload it to an http server, or try a different browser.");
                             }),
                             (t.onload = function () {
+                                console.log('t.responseText in onload: ', t.responseText);
+
                                 var a = JSON.parse(t.responseText);
                                 for (var s in a) "undefined" == typeof o[s] && (o[s] = a[s]);
                                 if (o.unityVersion) {
